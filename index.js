@@ -159,12 +159,15 @@ function scoreboard(inningScore,inning,num) {
     home += temp.Home;
     away +=temp.Away;
   }
-  if(home === away){
-    sheet.push(`This game will require extra innings: Away ${away} - Home ${home}`);
-  }
-  else{
-    sheet.push(`Final Score: Away ${away} - Home ${home}`);
-  }
+  // if(home === away){
+  //   sheet.push(`This game will require extra innings: Away ${away} - Home ${home}`);
+  // }
+  // else{
+  //   sheet.push(`Final Score: Away ${away} - Home ${home}`);
+  // }
+
+  sheet.push(home === away?`This game will require extra innings: Away ${away} - Home ${home}`:`Final Score: Away ${away} - Home ${home}`);
+
   return sheet;
 }
 
